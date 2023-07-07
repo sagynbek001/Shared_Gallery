@@ -1,5 +1,8 @@
-<h1>Hello, world!</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'mycss.css' %}">
+<a href="{% url 'gallery' %}">Next Page</a>
 <div class="container">
+    <h>Upload Your Photo</h>
     <form action="." method="post" enctype="multipart/form-data">
 
         {% csrf_token %}
