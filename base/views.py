@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect
 from .form import ImageForm
 from .models import Image
 
-# Create your views here.
 def gallery_view(request):
     images = Image.objects.all()
     return render(request, 'gallery.html', {'images': images})
@@ -18,5 +17,4 @@ def index(request):
     else:
         form = ImageForm()
     return render(request, 'index.html', {'form': form})
-
 
