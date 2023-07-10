@@ -13,3 +13,4 @@ def index(request):
     else:
         form = ImageForm()
     return render(request, 'index.html', {'form': form})
+
