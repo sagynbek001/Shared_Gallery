@@ -3,11 +3,9 @@ from django.http import HttpResponseRedirect
 from .form import ImageForm
 from .models import Image
 
-# Create your views here.
 def gallery_view(request):
     return render(request, "gallery.html")
-
-    
+  
 def index(request):
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
