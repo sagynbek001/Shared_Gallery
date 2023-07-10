@@ -5,7 +5,8 @@ from .models import Image
 
 # Create your views here.
 def gallery_view(request):
-    return render(request, "gallery.html")
+    images = Image.objects.all()
+    return render(request, 'gallery.html', {'images': images})
 
     
 def index(request):
@@ -17,4 +18,5 @@ def index(request):
     else:
         form = ImageForm()
     return render(request, 'index.html', {'form': form})
+
 
